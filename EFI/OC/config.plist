@@ -10,7 +10,7 @@
 				<key>Comment</key>
 				<string>SSDT-DNVMe</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-DNVMe.aml</string>
 			</dict>
@@ -241,6 +241,8 @@
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -348,7 +350,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string> Change _STA to XSTA</string>
+				<string>Change _STA to XSTA</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -369,8 +371,6 @@
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
-				<key>TgtBridge</key>
-				<data>R1BJMA==</data>
 				<key>TableSignature</key>
 				<data></data>
 			</dict>
@@ -397,8 +397,6 @@
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
-				<key>TgtBridge</key>
-				<data>VFBBRA==</data>
 				<key>TableSignature</key>
 				<data></data>
 			</dict>
@@ -425,8 +423,6 @@
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
-				<key>TgtBridge</key>
-				<data>WFhYWA==</data>
 				<key>TableSignature</key>
 				<data></data>
 			</dict>
@@ -453,8 +449,6 @@
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
-				<key>TgtBridge</key>
-				<data>WFhYWA==</data>
 				<key>TableSignature</key>
 				<data></data>
 			</dict>
@@ -487,20 +481,52 @@
 			<dict>
 				<key>Comment</key>
 				<string>Rename AZAL to HDEF (Audio)</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
 				<key>Find</key>
 				<data>QVpBTA==</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
 				<key>Replace</key>
 				<data>SERFRg==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
 				<key>TableSignature</key>
 				<data>RFNEVA==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Rename HDAS to HDEF (Audio)</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
 				<key>Find</key>
 				<data>SERBUw==</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
 				<key>Replace</key>
 				<data>SERFRg==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
 				<key>TableSignature</key>
 				<data>RFNEVA==</data>
 			</dict>
@@ -634,30 +660,32 @@
 				<key>model</key>
 				<string>Sunrise Point-LP HD Audio</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x14,0x2)</key>
 			<dict>
-				<key>AAPL,ig-platform-id</key>
-				<data>AACbPg==</data>
 				<key>AAPL,slot-name</key>
-				<string>Internal@0,2,0</string>
-				<key>device-id</key>
-				<data>mz4AAA==</data>
+				<string>Internal@0,20,2</string>
 				<key>device_type</key>
-				<string>VGA compatible controller</string>
-				<key>dpcd-max-link-rate</key>
-				<data>FAAAAA==</data>
-				<key>enable-dpcd-max-link-rate-fix</key>
-				<data>AQAAAA==</data>
-				<key>enable-hdmi20</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-unifiedmem</key>
-				<data>AAAAgA==</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
+				<string>RAM memory</string>
 				<key>model</key>
-				<string>Intel UHD Graphics 630 (Mobile)</string>
+				<string>Cannon Lake PCH Shared SRAM</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,20,0</string>
+				<key>device_type</key>
+				<string>USB controller</string>
+				<key>model</key>
+				<string>Cannon Lake PCH USB 3.1 xHCI Host Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,0,0</string>
+				<key>device_type</key>
+				<string>Host bridge</string>
+				<key>model</key>
+				<string>8th Gen Core Processor Host Bridge/DRAM Registers</string>
 			</dict>
 		</dict>
 		<key>Block</key>
@@ -976,13 +1004,13 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>BrcmPatchRAM2.kext</string>
+				<string>BrcmPatchRAM3.kext</string>
 				<key>Comment</key>
 				<string>Bluetooth</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/BrcmPatchRAM2</string>
+				<string>Contents/MacOS/BrcmPatchRAM3</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
